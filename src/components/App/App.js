@@ -5,6 +5,7 @@ import getAllPoets from '../../apicalls';
 
 const App = () => {
   const [poets, setPoets] = useState([]);
+  const [poet, setPoet] = useState('');
 
   useEffect(() => {
     getAllPoets()
@@ -12,15 +13,14 @@ const App = () => {
       const { authors } = data
       setPoets(authors)
     })
-  },
-  []) 
+  },[]);
   
 
   return (
     <div className="App">
-      <Form poets={poets}/>
+      <Form poets={poets} setPoet={setPoet}/>
     </div>
   );
-}
+};
 
 export default App;
