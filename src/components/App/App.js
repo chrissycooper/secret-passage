@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
+import Form from '../Form/Form';
 import getAllPoets from '../../apicalls';
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
 
   return (
     <div className="App">
-      
+      <Form poets={poets}/>
     </div>
   );
 }
