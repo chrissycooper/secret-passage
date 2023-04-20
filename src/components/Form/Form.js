@@ -2,14 +2,10 @@ import React from 'react';
 import './Form.css';
 import { Link } from 'react-router-dom';
 
-const Form = ({poets, setPoet, setProceed, proceed}) => {
+const Form = ({ poets, setPoet }) => {
 
   const handleChange = (event) => {
     setPoet(event.target.value);
-  }
-
-  const handleClick = () => {
-    setProceed(!proceed)
   }
 
   const options = poets.map(poet => {

@@ -3,6 +3,7 @@ import './App.css';
 import Form from '../Form/Form';
 import Poems from '../Poems/Poems';
 import Poem from '../Poem/Poem';
+import Home from '../Home/Home';
 import {getAllPoets, getPoems} from '../../apicalls';
 import { Route, Switch } from 'react-router-dom';
 
@@ -34,8 +35,8 @@ const App = () => {
   return (
     <div className="App">
       <Switch>
-        {/* <Route exact path='/'></Route> */}
-        <Route exact path='/'><Form poets={poets} setPoet={setPoet} setProceed={setProceed} proceed={proceed}/></Route>
+        <Route exact path='/'><Home/></Route>
+        <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet} /></Route>
         <Poems poems={poems}/>
       </Switch>
     </div>
