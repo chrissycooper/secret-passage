@@ -1,6 +1,7 @@
 import React from 'react';
 import Poem from '../Poem/Poem';
 import './Poems.css';
+import { Link } from 'react-router-dom';
 
 const Poems = ({poems}) => {
 
@@ -13,7 +14,7 @@ const Poems = ({poems}) => {
   */
   console.log(poems)
   const poEms = poems.map((poem, index) => {
-    return <Poem poem={poem} key={poem.title+index}/>
+    return <Poem poem={poem} key={index} id={index}/>
   })
   
 

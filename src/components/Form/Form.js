@@ -1,5 +1,6 @@
 import React from 'react';
 import './Form.css';
+import { Link } from 'react-router-dom';
 
 const Form = ({poets, setPoet, setProceed, proceed}) => {
 
@@ -24,7 +25,7 @@ const Form = ({poets, setPoet, setProceed, proceed}) => {
           {options}
         </select>
       </form>
-      <button onClick={handleClick}>proceed</button>
+      <Link to='/poem/1'>proceed</Link>
     </>
   )
 };
