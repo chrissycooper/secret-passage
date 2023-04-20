@@ -36,15 +36,7 @@ const App = () => {
       <Switch>
         {/* <Route exact path='/'></Route> */}
         <Route exact path='/'><Form poets={poets} setPoet={setPoet} setProceed={setProceed} proceed={proceed}/></Route>
-        {/* <Route path='/poems'><Poems poems={poems}/></Route> */}
-        <Route exact path='/poem/1'><Poem poem={poems[0]} id={1}/></Route>
-        <Route exact path='/poem/2'><Poem poem={poems[1]} id={2}/></Route>
-        <Route exact path='/poem/3'><Poem poem={poems[2]} id={3}/></Route>
-        {/* <Route path='/poems/:id' render={({match}) => {
-          console.log(match.params)
-          const { id } = match.params;
-          return <Poem poem={poems[0]}/>
-        }}/> */}
+        <Poems poems={poems}/>
       </Switch>
     </div>
   );
