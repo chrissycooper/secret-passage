@@ -9,8 +9,7 @@ const getPoems = (poet) => {
     return fetch(`https://poetrydb.org/random/3`)
     .then(res => res.json())
     .catch(err => console.log(err))
-
-  } else {
+  } else if (poet) {
     const nameSplit = poet.split(' ')
     const lastName = nameSplit[nameSplit.length-1]
   

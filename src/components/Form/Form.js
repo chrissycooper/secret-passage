@@ -1,10 +1,14 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({poets, setPoet}) => {
+const Form = ({poets, setPoet, setProceed, proceed}) => {
 
   const handleChange = (event) => {
     setPoet(event.target.value);
+  }
+
+  const handleClick = () => {
+    setProceed(!proceed)
   }
 
   const options = poets.map(poet => {
@@ -20,7 +24,7 @@ const Form = ({poets, setPoet}) => {
           {options}
         </select>
       </form>
-      <button>proceed</button>
+      <button onClick={handleClick}>proceed</button>
     </>
   )
 };
