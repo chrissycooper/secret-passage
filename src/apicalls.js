@@ -10,10 +10,7 @@ const getPoems = (poet) => {
     .then(res => res.json())
     .catch(err => console.log(err))
   } else if (poet) {
-    const nameSplit = poet.split(' ')
-    const lastName = nameSplit[nameSplit.length-1]
-  
-    return fetch(`https://poetrydb.org/author/${lastName}`)
+    return fetch(`https://poetrydb.org/author/${poet}`)
     .then(res => res.json())
     .catch(err => console.log(err))
   }
