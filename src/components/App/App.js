@@ -25,19 +25,21 @@ const App = () => {
   useEffect(() => {
     getPoems(poet)
     .then(data => {
-      const indices = getRandomIndex(data)
+      console.log(data)
+      const indices = getRandomIndex(data);
       setPoems([data[indices[0]], data[indices[1]], data[indices[2]]])});
   }, [poet]);
   
   const getRandomIndex = (data) => {
-      let index1 = Math.floor(Math.random() * data.length)
-      let index2 = Math.floor(Math.random() * data.length)
-      let index3 = Math.floor(Math.random() * data.length)
-
-      if(index1 !== index2 && index2 !== index3 && index1 !== index3) {
-        return [index1, index2, index3]
+      let index1 = Math.floor(Math.random() * data.length);
+      let index2 = Math.floor(Math.random() * data.length);
+      let index3 = Math.floor(Math.random() * data.length);
+      if (data.length < 3){
+        return [0, 1, index1]
+      } else if (index1 !== index2 && index2 !== index3 && index1 !== index3) {
+        return [index1, index2, index3];
       } else {
-        return getRandomIndex(data)
+        return getRandomIndex(data);
       }
   };
 

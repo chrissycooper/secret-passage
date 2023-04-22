@@ -12,7 +12,6 @@ const Poem = ({poem, id}) => {
 
   useEffect(() => {
     const styleMatch = findStyle(poem);
-    console.log('style match', styleMatch)
     setPalette(styleMatch);
   }, [])
   
