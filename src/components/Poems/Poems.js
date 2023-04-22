@@ -30,7 +30,7 @@ const Poems = ({poems}) => {
   
   return (
     <>
-      {portKeyIndex < 4 ?
+      {portKeyIndex < 4 && poems.length > 1 ?
         <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
       : <Link to='/'>{portKey}</Link>
       }
