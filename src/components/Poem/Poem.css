@@ -24,7 +24,8 @@ background: radial-gradient(circle, rgba(228,154,176,1) 0%, rgba(236,207,195,1) 
 }
 
 .nature {
-  background-color: #9AB106;
+  background: rgb(64,83,27);
+  background: linear-gradient(90deg, rgba(64,83,27,1) 23%, rgba(97,139,74,1) 60%, rgba(175,188,136,1) 100%);
   height: 100vh;
   width: 100vw;
   color: #385802;
@@ -73,7 +74,7 @@ background: radial-gradient(circle, rgba(228,154,176,1) 0%, rgba(236,207,195,1) 
   height: 500px;
   overflow-y: scroll;
   font-size: 1.5rem;
-  background-color: rgb(192,192,192, .75);
+  background-color: rgb(192,192,192, .85);
   border-radius: 30px;
 }
 
@@ -82,14 +83,8 @@ background: radial-gradient(circle, rgba(228,154,176,1) 0%, rgba(236,207,195,1) 
   color: white;
 }
 
-/* .nature-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-} */
 .deco-img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-
 }
