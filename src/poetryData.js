@@ -7,5 +7,3 @@ const commonWords = [
 ]
 
 export default commonWords;
-//for each one a color scheme of three colors (background, text, accent)
-//and two images?

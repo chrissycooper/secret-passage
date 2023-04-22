@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './Poem.css';
-import { Link } from 'react-router-dom';
 import commonWords from '../../poetryData';
 
 const Poem = ({poem, id}) => {

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import Poems from '../Poems/Poems';
-import Poem from '../Poem/Poem';
 import Home from '../Home/Home';
 import {getAllPoets, getPoems} from '../../apicalls';
 import { Route, Switch } from 'react-router-dom';
