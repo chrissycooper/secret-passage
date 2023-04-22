@@ -10,21 +10,21 @@ background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
   clip-path: ellipse(60% 64% at 50% 64%);
 }
 
- h3 {
+ .desc {
   margin: 20px;
   margin-top: 400px;
   width: 350px;
   font-size: 1.35rem;
  }
 
- h2 {
+ .title {
   margin: 20px;
   margin-top: 300px;
   font-family: 'Castoro Titling', cursive;
   font-size: 4rem;
  }
 
- h1 {
+ .welcome {
   margin: 20px;
   margin-top: 200px;
  }
@@ -35,7 +35,7 @@ background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
   font-size: 2rem;
  }
 
- h1, h2, h3, .arch-link {
+ .welcome, .title, .desc, .arch-link {
   position: absolute;
   color: white;
   z-index: 1;

@@ -1,20 +1,95 @@
 .time {
   background-color: goldenrod;
+  height: 100vh;
+  width: 100vw;
 }
 
 .love {
-  background-color: pink;
+  background: rgb(228,154,176);
+background: radial-gradient(circle, rgba(228,154,176,1) 0%, rgba(236,207,195,1) 50%);
+  color: #D86E8E;
+  height: 100vh;
+  width: 100vw;
+
 }
 
-.body{
-  background-color: aqua;
+.body {
+  background-size: 40px 40px;
+  background-image:
+  linear-gradient(to right, white 1px, transparent 1px),
+  linear-gradient(to bottom, white 1px, #9BC4FD 1px);
+  color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
 }
 
 .nature {
-  background-color: green;
+  background-color: #9AB106;
+  height: 100vh;
+  width: 100vw;
+  color: #385802;
 }
 
 .spooky {
-  background-color: black;
+  background-image: url('https://www.publicdomainpictures.net/pictures/280000/nahled/grainy-image-of-a-shadow.jpg');
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
   color: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+.default {
+  background-color: #16697A;
+  color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.poem-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.poem-title {
+  margin-top: 75px;
+  font-size: 2rem;
+  background-color:rgb(192,192,192, .75);
+  padding: 30px;
+  border-radius: 30px;
+}
+.poem-author {
+  font-size: 3rem;
+  background-color:rgb(192,192,192, .75);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.lines{
+  width: 50%;
+  height: 500px;
+  overflow-y: scroll;
+  font-size: 1.5rem;
+  background-color: rgb(192,192,192, .75);
+  border-radius: 30px;
+}
+
+.love-lines{
+  background-color: rgb(149, 125, 149, .75);
+  color: white;
+}
+
+/* .nature-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+} */
+.deco-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+
 }

@@ -14,6 +14,7 @@ const Form = ({ poets, setPoet }) => {
 
   return (
     <>
+      <h1> The following poems will be styled based on the occurance of one of the 25 most commonly used words in poetry.</h1>
       <form>
         <select name='authors' id='authors' onChange={handleChange}>
           <option value='' defaultValue> Select Your Poet</option>
