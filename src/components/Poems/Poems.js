@@ -20,7 +20,6 @@ const Poems = ({ poems }) => {
   const shuffleKeyPosition = () => {
     var randPosX = Math.floor((Math.random() * bodyWidth));
     var randPosY = Math.floor((Math.random() * bodyHeight));
-    console.log(randPosX, randPosY)
     setPortKeyStyle({width: '35px', position: 'absolute', left:`${randPosX}px`, top:`${randPosY}px` })
   }
 
@@ -44,5 +43,5 @@ const Poems = ({ poems }) => {
 export default Poems; 
 
 Poems.propTypes = {
-  poems: PropTypes.object 
+  poems: PropTypes.array 
 }

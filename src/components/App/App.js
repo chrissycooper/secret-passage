@@ -11,6 +11,7 @@ const App = () => {
   const [poets, setPoets] = useState([]);
   const [poet, setPoet] = useState('Emily Dickinson');
   const [poems, setPoems] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getAllPoets()
@@ -18,6 +19,7 @@ const App = () => {
       const { authors } = data;
       setPoets(authors);
     })
+    .catch(err => setError(err))
   },[]);
 
   useEffect(() => {
@@ -37,6 +39,7 @@ const App = () => {
       }
       checkNumOfPoems(data)
     })
+    .catch(err => setError(err))
   }, [poet]);
   
   const getRandomIndex = (data) => {
@@ -48,13 +51,15 @@ const App = () => {
 
   return (
     <div className="App">
-        <Switch>
-          <Route exact path='/'><Home/></Route>
-          <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
-          <Route exact path='/404'><NotFound /></Route>
-          <Route exact path='/poem/:index'><Poems poems={poems}/></Route>
-          <Route path='*'><Redirect to='/404'/></Route>
-        </Switch>
+        {error ? <NotFound /> :
+          <Switch>
+            <Route exact path='/'><Home/></Route>
+            <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
+            <Route exact path='/404'><NotFound /></Route>
+            <Route exact path='/poem/:index'><Poems poems={poems}/></Route>
+            <Route path='*'><Redirect to='/404'/></Route>
+          </Switch>
+        }
     </div>
   );
 };
