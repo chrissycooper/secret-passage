@@ -15,6 +15,7 @@ const App = () => {
   useEffect(() => {
     getAllPoets()
     .then( data => {
+      console.log(data)
       const { authors } = data;
       setPoets(authors);
     })

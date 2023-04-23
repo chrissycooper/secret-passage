@@ -22,7 +22,7 @@ const Form = ({ poets, setPoet }) => {
           {options}
         </select>
       </form>
-      <Link to='/poem/1'>proceed</Link>
+      <Link id='form-link' to='/poem/1'>proceed</Link>
     </>
   )
 };
