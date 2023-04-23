@@ -9,7 +9,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 const App = () => {
   const [poets, setPoets] = useState([]);
-  const [poet, setPoet] = useState('random');
+  const [poet, setPoet] = useState('Emily Dickinson');
   const [poems, setPoems] = useState([]);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const App = () => {
           <Route exact path='/'><Home/></Route>
           <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
           <Route exact path='/404'><NotFound /></Route>
-          <Route path='/poem/:index'><Poems poems={poems}/></Route>
+          <Route exact path='/poem/:index'><Poems poems={poems}/></Route>
           <Route path='*'><Redirect to='/404'/></Route>
         </Switch>
     </div>
