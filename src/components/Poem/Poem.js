@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './Poem.css';
 import commonWords from '../../poetryData';
+import PropTypes from 'prop-types';
 
 const Poem = ({poem, id}) => {
+  console.log('poem', poem)
   const [palette, setPalette] = useState('')
   const {title, author, lines} = poem;
   const lineElements = lines.map((line, index )=> {
@@ -60,3 +62,8 @@ const Poem = ({poem, id}) => {
 }
 
 export default Poem;
+
+Poem.propTypes = {
+  poem: PropTypes.object,
+  id: PropTypes.number
+}

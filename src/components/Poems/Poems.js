@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Poem from '../Poem/Poem';
 import './Poems.css';
 import { Link, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Poems = ({ poems }) => {
   const [portKeyStyle, setPortKeyStyle] = useState({
@@ -26,12 +27,12 @@ const Poems = ({ poems }) => {
   const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition} alt='the port key!'/>
 
   const poEms = poems.map((poem, index) => {
-    return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={index} id={index+1}/></Route>
+    return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={`${poem.title}-${index}`} id={index+1}/></Route>
   });
   
   return (
     <>
-      {portKeyIndex === 3 && poems.length === 2 || poems.length === 1 || portKeyIndex >= 4?
+      {(portKeyIndex === 3 && poems.length === 2) || poems.length === 1 || portKeyIndex >= 4?
       <Link to='/'>{portKey}</Link>
       : <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
       }
@@ -41,3 +42,7 @@ const Poems = ({ poems }) => {
 }
 
 export default Poems; 
+
+Poems.propTypes = {
+  poems: PropTypes.object 
+}
