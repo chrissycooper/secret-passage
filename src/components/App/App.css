@@ -1,4 +1,13 @@
 
+
+a:hover {
+  color: hotpink;
+}
+a:link{
+  text-decoration: none;
+}
+
+
 .App {
   font-family: 'Cormorant Garamond';
   text-align: center;
@@ -15,3 +24,4 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+

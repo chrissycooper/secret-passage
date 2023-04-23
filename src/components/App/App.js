@@ -8,14 +8,12 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
   const [poets, setPoets] = useState([]);
-  const [poet, setPoet] = useState('Emily Dickinson'); //errors were being thrown without a truthy initial value
+  const [poet, setPoet] = useState('random');
   const [poems, setPoems] = useState([]);
-
 
   useEffect(() => {
     getAllPoets()
     .then( data => {
-      console.log(data)
       const { authors } = data;
       setPoets(authors);
     })
@@ -52,7 +50,7 @@ const App = () => {
     <div className="App">
       <Switch>
         <Route exact path='/'><Home/></Route>
-        <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet} /></Route>
+        <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
         <Poems poems={poems}/>
       </Switch>
     </div>
