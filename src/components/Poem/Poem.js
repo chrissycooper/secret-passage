@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Poem.css';
-import { Link } from 'react-router-dom';
 import commonWords from '../../poetryData';
+import PropTypes from 'prop-types';
 
 const Poem = ({poem, id}) => {
   const [palette, setPalette] = useState('')
@@ -13,7 +13,7 @@ const Poem = ({poem, id}) => {
   useEffect(() => {
     const styleMatch = findStyle(poem);
     setPalette(styleMatch);
-  }, [])
+  }, [poem])
   
   const findStyle = (poem) => {
     let styleType = commonWords.reduce((acc, cv) => {
@@ -49,9 +49,9 @@ const Poem = ({poem, id}) => {
   return (
     <>
       <section className={`${palette} poem-area`}>
-        <img className={`${palette}-img deco-img` } src={getImage()}/>
+        <img className={`${palette}-img deco-img` } src={getImage()} alt=''/>
         <h1 className='poem-title'>{title}</h1>
-        <h2 className='poem-author'>{author}</h2>
+        <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
         <div className={`lines ${palette + '-lines'}`}>
           {lineElements}
         </div>
@@ -61,3 +61,8 @@ const Poem = ({poem, id}) => {
 }
 
 export default Poem;
+
+Poem.propTypes = {
+  poem: PropTypes.object,
+  id: PropTypes.number
+}

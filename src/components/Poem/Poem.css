@@ -88,3 +88,7 @@ background: radial-gradient(circle, rgba(228,154,176,1) 0%, rgba(236,207,195,1) 
   height: 300px;
   border-radius: 50%;
 }
+
+.poet-link {
+  color: white; 
+}
