@@ -20,22 +20,21 @@ const App = () => {
     })
   },[]);
 
-  const checkNumOfPoems = (data) => {
-    if(data.length === 1) {
-      setPoems([data[0]])
-    } else if ( data.length === 2) {
-      setPoems([data[0], data[1]])
-    } else if (data.length === 3) {
-      setPoems([data[0], data[1], data[2]])
-    } else {
-      const indices = getRandomIndex(data);
-      setPoems([data[indices[0]], data[indices[1]], data[indices[2]]])
-    }
-  }
-
   useEffect(() => {
     getPoems(poet)
     .then(data => {
+      const checkNumOfPoems = (data) => {
+        if(data.length === 1) {
+          setPoems([data[0]])
+        } else if ( data.length === 2) {
+          setPoems([data[0], data[1]])
+        } else if (data.length === 3) {
+          setPoems([data[0], data[1], data[2]])
+        } else {
+          const indices = getRandomIndex(data);
+          setPoems([data[indices[0]], data[indices[1]], data[indices[2]]])
+        }
+      }
       checkNumOfPoems(data)
     })
   }, [poet]);
@@ -47,14 +46,13 @@ const App = () => {
       return [index1, index2, index3];
   };
 
-
   return (
     <div className="App">
         <Switch>
           <Route exact path='/'><Home/></Route>
           <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
           <Route exact path='/404'><NotFound /></Route>
-          <Route path='/poem/:index' ><Poems poems={poems}/></Route>
+          <Route path='/poem/:index'><Poems poems={poems}/></Route>
           <Route path='*'><Redirect to='/404'/></Route>
         </Switch>
     </div>
