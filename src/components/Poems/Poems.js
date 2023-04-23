@@ -12,7 +12,6 @@ const Poems = ({ poems }) => {
   });
   const [portKeyIndex, setPortKeyIndex] = useState(2);
 
-
   const keySrc = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBmZDQ5ZDRkYzk3ZDcwYmI3YmUyMzEyNzE3ZDdhM2RlY2YzZTRjYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/LuvAW3OKmBgywTpGDY/giphy.gif';
   const bodyHeight = document.body.clientHeight;
   const bodyWidth = document.body.clientWidth;
@@ -32,9 +31,9 @@ const Poems = ({ poems }) => {
   
   return (
     <>
-      {portKeyIndex < 4 && poems.length > 1 ?
-        <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
-        : <Link to='/'>{portKey}</Link>
+      {portKeyIndex === 3 && poems.length === 2 || poems.length === 1 || portKeyIndex >= 4?
+      <Link to='/'>{portKey}</Link>
+      : <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
       }
       {poEms}
     </>
