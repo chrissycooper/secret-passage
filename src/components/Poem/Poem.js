@@ -12,7 +12,7 @@ const Poem = ({poem, id}) => {
   useEffect(() => {
     const styleMatch = findStyle(poem);
     setPalette(styleMatch);
-  }, [])
+  }, [poem])
   
   const findStyle = (poem) => {
     let styleType = commonWords.reduce((acc, cv) => {
@@ -48,9 +48,9 @@ const Poem = ({poem, id}) => {
   return (
     <>
       <section className={`${palette} poem-area`}>
-        <img className={`${palette}-img deco-img` } src={getImage()}/>
+        <img className={`${palette}-img deco-img` } src={getImage()} alt=''/>
         <h1 className='poem-title'>{title}</h1>
-        <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank"><h2 className='poem-author'>{author}</h2></a>
+        <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
         <div className={`lines ${palette + '-lines'}`}>
           {lineElements}
         </div>

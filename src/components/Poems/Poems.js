@@ -3,7 +3,7 @@ import Poem from '../Poem/Poem';
 import './Poems.css';
 import { Link, Route } from 'react-router-dom';
 
-const Poems = ({poems}) => {
+const Poems = ({ poems }) => {
   const [portKeyStyle, setPortKeyStyle] = useState({
     width: '35px',
     position: 'absolute',
@@ -24,7 +24,7 @@ const Poems = ({poems}) => {
     setPortKeyStyle({width: '35px', position: 'absolute', left:`${randPosX}px`, top:`${randPosY}px` })
   }
 
-  const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition}/>
+  const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition} alt='the port key!'/>
 
   const poEms = poems.map((poem, index) => {
     return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={index} id={index+1}/></Route>
@@ -34,7 +34,7 @@ const Poems = ({poems}) => {
     <>
       {portKeyIndex < 4 && poems.length > 1 ?
         <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
-      : <Link to='/'>{portKey}</Link>
+        : <Link to='/'>{portKey}</Link>
       }
       {poEms}
     </>
