@@ -25,3 +25,9 @@ a:link{
   color: white;
 }
 
+@media screen and (max-width: 40em) {
+  * {
+    overflow-x: scroll;
+  }
+}
+
