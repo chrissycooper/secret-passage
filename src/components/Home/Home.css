@@ -24,7 +24,7 @@ background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
 
  .title {
   margin: 20px;
-  margin-top: 300px;
+  margin-top: 30vh;
   font-family: 'Castoro Titling', cursive;
   font-size: 4rem;
  }
@@ -47,3 +47,5 @@ background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
   left: 48%;
   transform: translateX(-50%);
  }
+
+ 
