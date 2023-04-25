@@ -6,6 +6,18 @@ Secret Passage is a poetry browsing application that involves a sort of ISpy-lik
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTBhNTg1YWNjZDQ2OTdjNTE3ZGY4ZDhmM2YzZTkzYTdiZDUzZDU1NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/E3giXddIqO8OBXSKgE/giphy.gif)
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNhMTFlYmUwZTk3MmZhY2VkNjc2OWQ0ODFlNTJkYjFmZDAxZjEwOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/5vLBUwuHAKqZn9p8PH/giphy.gif)
 
+### View the Project:
+[Secret Passage](https://secret-passage.vercel.app/)
+
+### Local Installation:
+1. Fork this repository.
+2. Create a local repository.
+3. Follow the Github on-screen commands to connect your local repository to your newly forked repository.
+4. Change directories into client and run npm install, then npm start to start the application locally.
+5. Navigate to http://localhost:3000 in your browser to use the application.
+
+
+
 ### Contributors
 [C. R. Cooper](https://github.com/chrissycooper)
 
