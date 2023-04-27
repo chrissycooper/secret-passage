@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Poem from '../Poem/Poem';
 import './Poems.css';
 import { Link, Route } from 'react-router-dom';
@@ -6,12 +6,16 @@ import PropTypes from 'prop-types';
 
 const Poems = ({ poems }) => {
   const [portKeyStyle, setPortKeyStyle] = useState({
-    width: '35px',
-    position: 'absolute',
-    left: '10px',
-    top: '50px',
+    width: '',
+    position: '',
+    left: '',
+    top: '',
   });
   const [portKeyIndex, setPortKeyIndex] = useState(2);
+
+  useEffect(() => {
+    shuffleKeyPosition()
+  }, [])
 
   const keySrc = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBmZDQ5ZDRkYzk3ZDcwYmI3YmUyMzEyNzE3ZDdhM2RlY2YzZTRjYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/LuvAW3OKmBgywTpGDY/giphy.gif';
   const bodyHeight = document.body.clientHeight;
