@@ -41,7 +41,7 @@ const Poem = ({poem, id}) => {
       case 'time':
         return 'https://media.giphy.com/media/l4hLT6kXPi9js7xFC/giphy.gif'
       default:
-        return 'https://plus.unsplash.com/premium_photo-1670044658315-135afb4afe35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
+        return 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2NlODQ5MGE3ZDk5OWExNTMxZTg5ZTY0NDdiYmYxYmUxOTZiMzdiOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/1zgzISaYrnMAYRJJEr/giphy.gif'
       
       }
   }
@@ -54,6 +54,7 @@ const Poem = ({poem, id}) => {
         <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
         <div className={`lines ${palette + '-lines'}`}>
           {lineElements}
+        {palette === 'body' && <img src="https://64.media.tumblr.com/b21f01b041647bd47d2197ea3e854868/tumblr_mmbejecChw1rfjowdo1_500.gifv" width="70" height="100" alt="a fan with blue blades blowing air"/>}
         </div>
       </section>
     </>
