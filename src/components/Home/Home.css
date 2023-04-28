@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: rgb(192,192,192);
-background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
+  background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
   position: relative;
 }
 
@@ -17,35 +17,54 @@ background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
 
  .desc {
   margin: 20px;
-  margin-top: 400px;
+  margin-top: 30vh;
   width: 350px;
   font-size: 1.35rem;
  }
 
+ .direction {
+  margin: 20px;
+  margin-top: 55vh;
+  width: 350px;
+  font-size: 1.35rem;
+  color: white;
+ }
+
  .title {
   margin: 20px;
-  margin-top: 30vh;
+  margin-top: 11vh;
   font-family: 'Castoro Titling', cursive;
-  font-size: 4rem;
+  font-size: 6rem;
  }
 
  .welcome {
   margin: 20px;
-  margin-top: 200px;
+  margin-top: 5vh;
  }
 
  .arch-link {
-  margin: 20px;
   margin-top: 550px;
   font-size: 2rem;
+ }
+
+ .trapdoor{
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+ }
+
+ .trapdoor:hover{
+  color: whitesmoke;
+  box-shadow: 0 5px 15px whitesmoke;
  }
 
  .welcome, .title, .desc, .arch-link {
   position: absolute;
   color: white;
   z-index: 1;
-  left: 48%;
-  transform: translateX(-50%);
  }
 
- 
+ .txt-background {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+ }
