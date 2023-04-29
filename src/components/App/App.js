@@ -56,7 +56,13 @@ const App = () => {
             <Route exact path='/'><Home/></Route>
             <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
             <Route exact path='/404'><NotFound /></Route>
-            <Route exact path='/poem/:index'><Poems poems={poems}/></Route>
+            <Route exact path='/poem/:index' render={({match}) => {
+              console.log(typeof match.params.index)
+              if(match.params.index !== '1' && match.params.index !== '2' && match.params.index !== '3'){
+                return <Redirect to='/404'/>
+              }
+             return <Poems poems={poems}/>
+            }}></Route>
             <Route path='*'><Redirect to='/404'/></Route>
           </Switch>
         }

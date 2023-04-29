@@ -30,13 +30,13 @@ const Poems = ({ poems }) => {
   const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition} alt='the port key!'/>
 
   const poEms = poems.map((poem, index) => {
-    let unique = poem.title.split(' ').join('')
+    let unique = poem.title.split(' ').join('') + index
     return <Route key={unique} exact path={`/poem/${index+1}`}><Poem poem={poem} key={poem.title} id={index+1}/></Route>
   });
   
   return (
     <>
-      {(portKeyIndex === 3 && poems.length === 2) || poems.length === 1 || portKeyIndex >= 4?
+      {(portKeyIndex === 3 && poems.length === 2) || poems.length === 1 || portKeyIndex >= 4 ?
       <Link to='/'>{portKey}</Link>
       : <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
       }
