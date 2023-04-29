@@ -3,7 +3,7 @@ import './Poem.css';
 import commonWords from '../../poetryData';
 import PropTypes from 'prop-types';
 
-const Poem = ({poem, id}) => {
+const Poem = ({ poem }) => {
   const [palette, setPalette] = useState('')
   const {title, author, lines} = poem;
   const lineElements = lines.map((line, index )=> {

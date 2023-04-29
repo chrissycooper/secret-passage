@@ -30,7 +30,8 @@ const Poems = ({ poems }) => {
   const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition} alt='the port key!'/>
 
   const poEms = poems.map((poem, index) => {
-    return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={`${poem.title}-${index}`} id={index+1}/></Route>
+    let unique = crypto.randomUUID()
+    return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={unique} id={index+1}/></Route>
   });
   
   return (
