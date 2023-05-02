@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import Poem from '../Poem/Poem';
 import './Poems.css';
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Poems = ({ poems }) => {
+const Poems = ({ poems, index }) => {
+
   const [portKeyStyle, setPortKeyStyle] = useState({
     width: '',
     position: '',
     left: '',
     top: '',
   });
-  const [portKeyIndex, setPortKeyIndex] = useState(2);
 
   useEffect(() => {
     shuffleKeyPosition()
@@ -29,17 +29,15 @@ const Poems = ({ poems }) => {
 
   const portKey = <img className='port-key' src={keySrc} style={portKeyStyle} onClick={shuffleKeyPosition} alt='the port key!'/>
 
-  const poEms = poems.map((poem, index) => {
-    return <Route exact path={`/poem/${index+1}`}><Poem poem={poem} key={`${poem.title}-${index}`} id={index+1}/></Route>
-  });
-  
   return (
+    !poems[index-1] ? <Redirect to='/404'/> :
     <>
-      {(portKeyIndex === 3 && poems.length === 2) || poems.length === 1 || portKeyIndex >= 4?
-      <Link to='/'>{portKey}</Link>
-      : <Link to={`/poem/${portKeyIndex}`} onClick={()=> {setPortKeyIndex(portKeyIndex +1)}}>{portKey}</Link>
+      { 
+        index < poems.length ? 
+        <Link to={`/poem/${index + 1}`}>{portKey}</Link> :
+        <Link to='/'>{portKey}</Link>
       }
-      {poEms}
+      <Poem poem={poems[index-1]} key={poems[index-1].title} id={index+1}/>
     </>
   )
 }

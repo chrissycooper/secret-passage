@@ -56,7 +56,9 @@ const App = () => {
             <Route exact path='/'><Home/></Route>
             <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
             <Route exact path='/404'><NotFound /></Route>
-            <Route exact path='/poem/:index'><Poems poems={poems}/></Route>
+            <Route exact path='/poem/:index' render={({match}) => {
+             return <Poems poems={poems} index={parseInt(match.params.index)}/>
+            }}></Route>
             <Route path='*'><Redirect to='/404'/></Route>
           </Switch>
         }
