@@ -27,17 +27,26 @@ const App = () => {
   useEffect(() => {
     getPoems(poet)
     .then(data => {
-          const indices = getRandomIndex(data);
-          setPoems([data[indices[0]], data[indices[1]], data[indices[2]]]);
+          const randPoems = getRandomPoems(data);
+          setPoems(randPoems);
     })
     .catch(err => setError(err));
   }, [poet]);
   
-  const getRandomIndex = (data) => {
-      let index1 = Math.floor(Math.random() * data.length);
-      let index2 = Math.floor(Math.random() * data.length);
-      let index3 = Math.floor(Math.random() * data.length);
-      return [index1, index2, index3];
+  const getRandomPoems = (data) => {
+    const findIndex = () => Math.floor(Math.random() * data.length);
+      const indices = [];
+      if(data.length >= 10) {
+        for (let i = 0; i < 10; i++){
+          indices.push(findIndex());
+        }
+      } else {
+        for (let i = 0; i < data.length; i++){
+          indices.push(i);
+        }
+      }
+      const poems = indices.map(index => data[index])
+      return poems;
   };
 
   return (

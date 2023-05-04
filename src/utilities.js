@@ -12,9 +12,7 @@ const filterForNumPoems = (data) => {
       const poets = [];
       authors.forEach(author => {
        const poems = everything.filter(poem => poem.author === author);
-       if(poems.length >= 3) {
-        poets.push(author)
-       } 
+       poems.length >= 3 && poets.push(author)
       })
       return poets;
     })
