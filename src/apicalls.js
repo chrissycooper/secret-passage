@@ -11,7 +11,7 @@ const getAllPoets = () => {
 
 const getPoems = (poet) => { 
   if(poet === "random") {
-    return fetch(`https://poetrydb.org/random/3`)
+    return fetch(`https://poetrydb.org/random/10`)
     .then(res => {
       if (res.ok) {
         return res.json();
