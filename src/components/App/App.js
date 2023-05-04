@@ -6,6 +6,7 @@ import Home from '../Home/Home';
 import NotFound from '../NotFound/NotFound';
 import {getAllPoets, getPoems} from '../../apicalls';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import filterForNumPoems from '../../utilities';
 
 const App = () => {
   const [poets, setPoets] = useState([]);
@@ -16,30 +17,20 @@ const App = () => {
   useEffect(() => {
     getAllPoets()
     .then( data => {
-      const { authors } = data;
-      setPoets(authors);
+      filterForNumPoems(data)
+      .then(authors => setPoets(authors))
+      .catch(err => setError(err))
     })
-    .catch(err => setError(err))
-  },[]);
+    .catch(err => setError(err));
+  }, []);
 
   useEffect(() => {
     getPoems(poet)
     .then(data => {
-      const checkNumOfPoems = (data) => {
-        if(data.length === 1) {
-          setPoems([data[0]])
-        } else if ( data.length === 2) {
-          setPoems([data[0], data[1]])
-        } else if (data.length === 3) {
-          setPoems([data[0], data[1], data[2]])
-        } else {
           const indices = getRandomIndex(data);
-          setPoems([data[indices[0]], data[indices[1]], data[indices[2]]])
-        }
-      }
-      checkNumOfPoems(data)
+          setPoems([data[indices[0]], data[indices[1]], data[indices[2]]]);
     })
-    .catch(err => setError(err))
+    .catch(err => setError(err));
   }, [poet]);
   
   const getRandomIndex = (data) => {
