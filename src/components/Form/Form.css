@@ -21,12 +21,15 @@
 }
 
 .form-link {
-  padding: 20px;
+  margin: 0px 0px 0px 50px;
+  cursor: pointer;
+  padding: 15px;
   border-radius: 15px;
   background-color: white;
   color: black;
-  width: 50px;
-  margin: 30px;
+  width: 65px;
+  height: 150px;
+  border: 1px black solid;
 }
 
 .form-title{
@@ -49,7 +52,7 @@ a {
   cursor: pointer;
 }
 
-ul{
+ul {
   list-style: none;
   background-color: white;
   padding: 30px;
@@ -63,16 +66,20 @@ li {
 .list-love{
   color: #D86E8E
 }
+
 .list-time{
   color: goldenrod;
 }
+
 .list-body{
   color: #9BC4FD;
 }
+
 .list-spooky{
   color: red;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .list-nature{
   color: rgba(97,139,74,1)
 }
