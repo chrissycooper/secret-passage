@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './Poem.css';
 import commonWords from '../../poetryData';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+
 
 const Poem = ({ poem }) => {
   const [palette, setPalette] = useState('')
@@ -49,6 +51,7 @@ const Poem = ({ poem }) => {
   return (
     <>
       <section className={`${palette} poem-area`}>
+        <Link to='/' className={`home-btn ${palette}`}>Go Home</Link>
         <img className={`${palette}-img deco-img` } src={getImage()} alt=''/>
         <h1 className='poem-title'>{title}</h1>
         <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
