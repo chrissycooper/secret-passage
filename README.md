@@ -29,7 +29,9 @@ There was a very short timeline for this project, about five days for planning a
 I am very pleased with the passkey's random position, it was an interesting problem to solve within React. I had originally worked it out in [this codepen](https://codepen.io/thecrimb/pen/eYPdRPb), but it wasn't exactly a plug-and-play to get it to work in the application. 
 
 ### Challenges
-I structured my application with a set of nested components, and I struggled with handling bad url errors. The Poems component contains an array of Poem components, each which is wrapped in a Route. I wasn't able to get the Reroute to include bad urls like this: `/poems/banana`. 
+UPDATE: After a component architechure restructuring, the route error handling is now working properly. There was not real reason to iterate over the fetched poems and create an array of the Poem components to hold in App. This is useful if you need to display a lot of instances of a component at once (like items listed for sale in a webstore), but in this case you are only looking at one Poem at a time. Now, the data flowing through component props changes as you navigate through the site, changing the display. 
+In any case, I'm glad I followed these two structures through, as I now have a deeper understanding of the pros and cons of various architectures. 
+Original Entry: I structured my application with a set of nested components, and I struggled with handling bad url errors. The Poems component contains an array of Poem components, each which is wrapped in a Route. I wasn't able to get the Reroute to include bad urls like this: `/poems/banana`. 
 
 ### Shout Outs
 I utilized this [list of most commonly used poetry words](https://www.robertpeake.com/archives/6676-top-poetry-words.html) from Robert Peake to create my styling schema.
