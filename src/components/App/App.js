@@ -4,9 +4,9 @@ import Form from '../Form/Form';
 import Poems from '../Poems/Poems';
 import Home from '../Home/Home';
 import NotFound from '../NotFound/NotFound';
-import {getAllPoets, getPoems} from '../../apicalls';
+import {getAllPoets, getPoems} from '../../utilities/apicalls';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import filterForNumPoems from '../../utilities';
+import filterForNumPoems from '../../utilities/filterPoets';
 
 const App = () => {
   const [poets, setPoets] = useState([]);

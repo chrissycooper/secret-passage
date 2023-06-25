@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Poem.css';
-import commonWords from '../../poetryData';
+import commonWords from '../../utilities/commonWords';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
