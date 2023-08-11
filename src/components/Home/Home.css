@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: rgb(192,192,192);
-  background: linear-gradient(0deg, rgba(192,192,192,1) 0%, var(--bkgd-gradient-dark-blue) 35%);
+  background: linear-gradient(0deg, var(--bkgd-gradient-silver) 0%, var(--bkgd-gradient-dark-blue) 35%);
   position: relative;
 }
 
