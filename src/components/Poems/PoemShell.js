@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import Poem from '../Poem/Poem';
-import './Poems.css';
+import Poem from './Poem/Poem';
+import './PoemShell.css';
 import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Poems = ({ poems, index }) => {
+const PoemShell = ({ poems, index }) => {
 
   const [portKeyStyle, setPortKeyStyle] = useState({
     width: '',
@@ -14,7 +14,7 @@ const Poems = ({ poems, index }) => {
   });
 
   useEffect(() => {
-    shuffleKeyPosition()
+    shuffleKeyPosition();
   }, [])
 
   const keySrc = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBmZDQ5ZDRkYzk3ZDcwYmI3YmUyMzEyNzE3ZDdhM2RlY2YzZTRjYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/LuvAW3OKmBgywTpGDY/giphy.gif';
@@ -42,8 +42,8 @@ const Poems = ({ poems, index }) => {
   )
 }
 
-export default Poems; 
+export default PoemShell; 
 
-Poems.propTypes = {
-  poems: PropTypes.array 
-}
+PoemShell.propTypes = {
+  poems: PropTypes.array
+};

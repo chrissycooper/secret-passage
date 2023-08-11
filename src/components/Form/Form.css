@@ -3,14 +3,17 @@
   height: 100vh;
   display: flex;
   background: rgb(192,192,192);
-  background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(37,51,71,1) 35%);
+  background: linear-gradient(0deg, var(--bkgd-gradient-silver) 0%, var(--bkgd-gradient-dark-blue) 35%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .form-container {
-  background-color: rgba(192, 192, 192, .75);
+  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 4px, transparent 4px, transparent 12px);
+  background-size: 4px 4px;
+  /* the two above create the background texture */
+  background-color: #9AD1D4;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -33,17 +36,18 @@
 }
 
 .form-title{
-  color: white;
-  font-size: 2.5rem;
+  color: #2A9134;
+  font-size: 4rem;
+  margin-bottom: 0px ;
 }
 
 .form-select{
   padding: 20px;
 }
 
-.form-text{
+.form-text {
   width: 80%;
-  color: white;
+  color: #003249 ;
   font-size: 2rem;
 }
 
@@ -57,6 +61,7 @@ ul {
   background-color: white;
   padding: 30px;
   border-radius: 15px;
+  border: 1px black solid;
 }
 
 li {
@@ -73,6 +78,7 @@ li {
 
 .list-body{
   color: #9BC4FD;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .list-spooky{
@@ -81,5 +87,6 @@ li {
 }
 
 .list-nature{
-  color: rgba(97,139,74,1)
+  color: rgba(97,139,74,1);
+  font-family: 'Instrument Serif', serif;
 }
