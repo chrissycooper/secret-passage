@@ -1,40 +1,36 @@
 .main {
   width: 100vw;
   height: 100vh;
-  background: rgb(192,192,192);
   background: linear-gradient(0deg, var(--bkgd-gradient-silver) 0%, var(--bkgd-gradient-dark-blue) 35%);
-  position: relative;
 }
 
 .port-key {
   width: 35px;
 }
 
-.arch-img {
-  margin-top: 35px;
-  clip-path: ellipse(60% 64% at 50% 64%);
-}
-
  .desc {
   margin: 20px;
   margin-top: 30vh;
-  width: 350px;
-  font-size: 1.35rem;
+  width: 25%;
+  font-size: 2rem;
  }
 
  .direction {
-  margin: 20px;
+  margin: 10px;
   margin-top: 55vh;
-  width: 350px;
-  font-size: 1.35rem;
-  color: white;
+  width: 30%;
+  font-size: 2rem;
+  color: #2A9134;
  }
 
  .title {
   margin: 20px;
   margin-top: 11vh;
-  font-family: 'Castoro Titling', cursive;
+  font-family: cursive;
+  letter-spacing: .75rem;
   font-size: 6rem;
+  position: absolute;
+  color: #2A9134;
  }
 
  .welcome {
@@ -53,13 +49,12 @@
  }
 
  .trapdoor:hover{
-  color: whitesmoke;
   box-shadow: 0 5px 15px whitesmoke;
  }
 
- .welcome, .title, .desc, .arch-link {
+ .welcome, .desc, .arch-link {
   position: absolute;
-  color: white;
+  color: #9AD1D4;
   z-index: 1;
  }
 
@@ -68,3 +63,9 @@
   height: 100vh;
   justify-content: center;
  }
+
+@media screen and (max-width: 912px) {
+  .desc {
+    width: 80%
+  }
+}
