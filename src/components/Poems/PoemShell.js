@@ -4,7 +4,7 @@ import './PoemShell.css';
 import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const PoemShell = ({ poems, index }) => {
+const PoemShell = ({ poems, index, setPoet }) => {
 
   const [portKeyStyle, setPortKeyStyle] = useState({
     width: '',
@@ -37,7 +37,7 @@ const PoemShell = ({ poems, index }) => {
         <Link to={`/poem/${index + 1}`}>{portKey}</Link> :
         <Link to='/'>{portKey}</Link>
       }
-      <Poem poem={poems[index-1]} key={poems[index-1].title} id={index+1}/>
+      <Poem poem={poems[index-1]} key={poems[index-1].title} id={index+1} setPoet={setPoet}/>
     </>
   )
 }

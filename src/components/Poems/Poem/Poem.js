@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 
-const Poem = ({ poem }) => {
+const Poem = ({ poem, setPoet }) => {
   const [palette, setPalette] = useState('')
   const {title, author, lines} = poem;
   const lineElements = lines.map((line, index )=> {
@@ -51,7 +51,7 @@ const Poem = ({ poem }) => {
   return (
     <>
       <section className={`${palette} poem-area`}>
-        <Link to='/' className={`home-btn ${palette}`}>Go Home</Link>
+        <Link to='/' className={`home-btn ${palette}`} onClick={()=>setPoet('none')}>Go Home</Link>
         <img className={`${palette}-img deco-img` } src={getImage()} alt=''/>
         <h1 className='poem-title'>{title}</h1>
         <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
