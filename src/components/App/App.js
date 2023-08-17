@@ -10,7 +10,7 @@ import filterForNumPoems from '../../utilities/filterPoets';
 
 const App = () => {
   const [poets, setPoets] = useState([]);
-  const [poet, setPoet] = useState('Emily Dickinson');
+  const [poet, setPoet] = useState('none');
   const [poems, setPoems] = useState([]);
   const [error, setError] = useState('');
 
@@ -54,7 +54,7 @@ const App = () => {
         {error ? <NotFound /> :
           <Switch>
             <Route exact path='/'><Home/></Route>
-            <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet}/></Route>
+            <Route exact path='/select-poet'><Form poets={poets} setPoet={setPoet} poet={poet}/></Route>
             <Route exact path='/404'><NotFound /></Route>
             <Route exact path='/poem/:index' render={({match}) => {
              return <PoemShell poems={poems} index={parseInt(match.params.index)}/>

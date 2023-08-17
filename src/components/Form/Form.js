@@ -3,7 +3,7 @@ import './Form.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Form = ({ poets, setPoet }) => {
+const Form = ({ poets, setPoet, poet }) => {
 
   const handleChange = (event) => {
     setPoet(event.target.value);
@@ -32,7 +32,7 @@ const Form = ({ poets, setPoet }) => {
             <option value='random'>random</option>
             {options}
           </select>
-        <Link id='form-link' className='form-link' to='/poem/1'>proceed</Link>
+        {poet !== 'none' && <Link id='form-link' className='form-link' to='/poem/1'>proceed</Link>}
         </form>
       </div>
     </main>
