@@ -7,7 +7,6 @@ const Home = () => {
 
   return (
     <main className='main'>
-        <div className='image-text'>
           <div className='txt-background'>
             <h1 className='welcome'>Welcome to</h1>
             <h2 className='title'>Secret Passage</h2>
@@ -15,7 +14,6 @@ const Home = () => {
             <h3 className='direction'>Click on the door below to begin!</h3>
             <Link className='arch-link'to='/select-poet'><img className='trapdoor'src={require('./tdoorwoodmed_gt.png')} alt='a trapdoor'/></Link>              
           </div>
-        </div>
     </main>
   )
 }
