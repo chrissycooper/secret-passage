@@ -43,7 +43,7 @@
   margin: 1%;
  }
 
- .arch-link {
+ .link-to-form {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -57,7 +57,7 @@
   box-shadow: 0 5px 15px whitesmoke;
  }
 
- .welcome, .desc, .arch-link {
+ .welcome, .desc, .link-to-form {
   color: #9AD1D4;
  }
 
