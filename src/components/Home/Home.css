@@ -61,6 +61,7 @@
   color: #9AD1D4;
  }
 
+ /* MEDIA QUERIES */
 
 @media screen and (max-width: 1400px) {
   .desc {
