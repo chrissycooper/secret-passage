@@ -90,3 +90,19 @@ li {
   color: rgba(97,139,74,1);
   font-family: 'Instrument Serif', serif;
 }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1400px) {
+  
+}
+@media screen and (max-width: 900px) {
+  
+}
+@media screen and (max-width: 600px) {
+  
+}
+@media screen and (max-width: 320px) {
+  
+}
