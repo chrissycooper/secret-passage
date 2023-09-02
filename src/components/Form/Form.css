@@ -27,14 +27,29 @@
   display: flex;
 }
 
+.portal {
+display: grid;
+align-items: center;
+justify-items: center;
+}
+
+.form-link, .link-text{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.link-text {
+  color: white;
+  z-index: 1;
+}
+
 .form-link {
   display: flex;
-  margin: 0px 0px 0px 50px;
+  margin: 0px 0px 0px 0px;
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
   background-color: var(--bkgd-gradient-dark-blue);
-  color: white;
   width: 50px;
   height: 50px;
 }
@@ -49,7 +64,7 @@
   margin-bottom: 0px;
 }
 
-.form-select{
+.form-select {
   padding: 20px;
 }
 

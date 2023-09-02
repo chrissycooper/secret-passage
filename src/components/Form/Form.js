@@ -32,7 +32,7 @@ const Form = ({ poets, setPoet, poet }) => {
             <option value='random'>random</option>
             {options}
           </select>
-        {poet !== 'none' && <Link id='form-link' className='form-link' to='/poem/1'>enter portal</Link>}
+        {poet !== 'none' && <div className='portal'><p className="link-text">enter portal</p><Link id='form-link' className='form-link' to='/poem/1'></Link></div>}
         </form>
       </div>
     </main>
