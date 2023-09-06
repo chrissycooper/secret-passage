@@ -45,7 +45,6 @@ justify-items: center;
 
 .form-link {
   display: flex;
-  margin: 0px 0px 0px 0px;
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
@@ -119,12 +118,15 @@ li {
 @media screen and (max-width: 1400px) {
   
 }
+
 @media screen and (max-width: 900px) {
   
 }
+
 @media screen and (max-width: 600px) {
   
 }
+
 @media screen and (max-width: 320px) {
   
 }
