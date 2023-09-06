@@ -15,6 +15,7 @@
   /* the two above create the background texture */
   background-color: #9AD1D4;
   width: 60%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,9 +29,9 @@
 }
 
 .portal {
-display: grid;
-align-items: center;
-justify-items: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .form-link, .link-text{
@@ -68,9 +69,9 @@ justify-items: center;
 }
 
 .form-text {
-  width: 80%;
+  width: 90%;
   color: #003249;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 a {
@@ -81,7 +82,7 @@ a {
 ul {
   list-style: none;
   background-color: white;
-  padding: 30px;
+  padding: 5%;
   border-radius: 15px;
 }
 
@@ -116,17 +117,58 @@ li {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1400px) {
-  
+  .form-title{
+    font-size: 3rem;
+  }
+
+  .form-text {
+    width: 90%;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
   
+  .form-text {
+    width: 95%;
+    font-size: 1.5rem;
+    margin: 12px;
+  }
+
+  .form-container{
+    width: 80%
+  }
 }
 
 @media screen and (max-width: 600px) {
-  
+  ul {
+    padding: 10px;
+  }
+
+  .form-title {
+    margin: auto;
+  }
+
+  .form-text {
+    width: 98%;
+    font-size: 1.25rem;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  
+  .form-container{
+    border-radius: 0%;
+    height: 100%;
+  }
+
+  .form-select{
+    padding:0%;
+  }
+
+  .form-link {
+    padding: 1px;
+    width: 20px;
+    height: 20px;
+  }
 }
