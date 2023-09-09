@@ -102,7 +102,22 @@
 
 }
 
-@media screen and (max-width: 40em) {
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1400px) {
+ 
+}
+
+@media screen and (max-width: 900px) {
+  
+}
+
+@media screen and (max-width: 600px) {
+  
+  
+}
+
+@media screen and (max-width: 320px) {
   .deco-img {
     width: 150px;
     height: 150px;
@@ -111,4 +126,5 @@
   .poem-area {
     flex-wrap: nowrap;
   }
+  
 }
