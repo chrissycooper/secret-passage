@@ -56,7 +56,9 @@ const Poem = ({ poem, setPoet }) => {
         <h1 className='poem-title'>{title}</h1>
         <a className='poet-link' href={`https://www.google.com/search?q=${author}+poetry`} target="_blank" rel="noreferrer"><h2 className='poem-author'>{author}</h2></a>
         <div className={`lines ${palette + '-lines'}`}>
-          {lineElements}
+          <div className='line-margin'>
+            {lineElements}
+          </div>
         {palette === 'body' && <img src="https://64.media.tumblr.com/b21f01b041647bd47d2197ea3e854868/tumblr_mmbejecChw1rfjowdo1_500.gifv" width="70" height="100" alt="a fan with blue blades blowing air"/>}
         </div>
       </section>

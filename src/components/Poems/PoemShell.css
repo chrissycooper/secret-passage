@@ -17,7 +17,14 @@
 }
 
 @media screen and (max-width: 600px) {
-  
+  .port-key-container {
+    width: auto;
+    height: auto;
+  }
+
+  .poem-author, h1, .poem-title, h2, .home-btn{
+    overflow-y: hidden;
+  }
   
 }
 
