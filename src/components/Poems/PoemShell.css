@@ -21,11 +21,6 @@
     width: auto;
     height: auto;
   }
-
-  .poem-author, h1, .poem-title, h2, .home-btn{
-    overflow-y: hidden;
-  }
-  
 }
 
 @media screen and (max-width: 320px) {

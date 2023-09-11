@@ -131,41 +131,52 @@
 }
 
 @media screen and (max-width: 600px) {
+  .poem-author, h1, .poem-title, h2, .home-btn{
+    /* overflow-y: hidden; */
+  }
+  
   .poem-area {
     flex-wrap: nowrap;
   }
+
   .poem-author {
     font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
   }
   
   .poet-link {
-    padding: 20px;
+    padding: 0px;
     max-width: 75%;
+    margin: 0px;
   }
   
   .poem-title {
     max-width: 100%;
+    margin: 10px;
+    padding: 10px;
   }
   
   .lines {
-    width: 75%;
+    width: 90%;
+    margin-bottom: 20px;
   }
-
-  .poem-area {
-    overflow-y: scroll;
-  }
-
+  
   .deco-img {
     width: 200px;
     height: 200px;
     margin: 0px;
   }
+  
+  .poem-area {
+    overflow-y: scroll;
+  }
 }
 
 @media screen and (max-width: 320px) {
-  .deco-img {
+  /* .deco-img {
     
-  }
+  } */
 
   
 }

@@ -25,9 +25,9 @@ a:link{
   color: white;
 }
 
-@media screen and (max-width: 40em) {
-  * {
-    overflow-x: scroll;
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .App {
+    overflow-y: scroll;
   }
 }
-
