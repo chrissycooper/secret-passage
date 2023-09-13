@@ -109,9 +109,9 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
  
-}
+} */
 
 @media screen and (max-width: 900px) {
   .deco-img {
@@ -131,10 +131,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .poem-author, h1, .poem-title, h2, .home-btn{
-    /* overflow-y: hidden; */
-  }
-  
   .poem-area {
     flex-wrap: nowrap;
   }
@@ -173,10 +169,9 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
   /* .deco-img {
     
-  } */
+  } 
+}*/
 
-  
-}
