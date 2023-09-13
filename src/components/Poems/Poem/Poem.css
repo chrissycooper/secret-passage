@@ -63,13 +63,18 @@
   border-radius: 30px;
 }
 
-.lines{
+.lines {
   width: 50%;
   height: 500px;
   overflow-y: scroll;
   font-size: 1.5rem;
   background-color: rgb(192,192,192, .85);
   border-radius: 30px;
+  margin: auto;
+}
+
+.line-margin {
+  margin: auto;
 }
 
 .love-lines{
@@ -102,13 +107,71 @@
 
 }
 
-@media screen and (max-width: 40em) {
+/* MEDIA QUERIES */
+
+/* @media screen and (max-width: 1400px) {
+ 
+} */
+
+@media screen and (max-width: 900px) {
   .deco-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
 
+  .poem-author {
+    font-size: 1.5rem;
+  }
+  
+  .poet-link {
+    padding: 20px;
+    max-width: 40%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
   .poem-area {
     flex-wrap: nowrap;
   }
+
+  .poem-author {
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .poet-link {
+    padding: 0px;
+    max-width: 75%;
+    margin: 0px;
+  }
+  
+  .poem-title {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .lines {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  
+  .deco-img {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+  }
+  
+  .poem-area {
+    overflow-y: scroll;
+  }
 }
+
+/* @media screen and (max-width: 320px) {
+  /* .deco-img {
+    
+  } 
+}*/
+

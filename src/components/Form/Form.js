@@ -3,7 +3,7 @@ import './Form.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Form = ({ poets, setPoet }) => {
+const Form = ({ poets, setPoet, poet }) => {
 
   const handleChange = (event) => {
     setPoet(event.target.value);
@@ -26,13 +26,13 @@ const Form = ({ poets, setPoet }) => {
           <li className='list-nature'>Nature</li>
         </ul>
         <p className='form-text'> These categories were based on the occurance of one of the 25 most commonly used words in around 3,000 poems from <a href='https://www.poetryfoundation.org/poetrymagazine'>Poetry Magazine</a>. This analysis was done by Robert Peake. You can read more about it at <a href='https://www.robertpeake.com/archives/6676-top-poetry-words.html'>his website</a>. If the poem does not contain one of those words, it will have a default style.</p>
-        <form>
+        <form className='submit-wrap'>
           <select className='form-select' name='authors' id='authors' onChange={handleChange}>
             <option value='' defaultValue> Select Your Poet</option>
             <option value='random'>random</option>
             {options}
           </select>
-        <Link id='form-link' className='form-link' to='/poem/1'>proceed</Link>
+        {poet !== 'none' && <div className='portal'><p className="link-text">enter portal</p><Link id='form-link' className='form-link' to='/poem/1'></Link></div>}
         </form>
       </div>
     </main>

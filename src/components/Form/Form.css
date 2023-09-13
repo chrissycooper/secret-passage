@@ -15,40 +15,63 @@
   /* the two above create the background texture */
   background-color: #9AD1D4;
   width: 60%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 25% 10%;
+}
+
+.submit-wrap {
+  display: flex;
+}
+
+.portal {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.form-link, .link-text{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.link-text {
+  color: white;
+  z-index: 1;
 }
 
 .form-link {
-  margin: 0px 0px 0px 50px;
+  display: flex;
   cursor: pointer;
   padding: 15px;
-  border-radius: 15px;
-  background-color: white;
-  color: black;
-  width: 65px;
-  height: 150px;
-  border: 1px black solid;
+  border-radius: 50%;
+  background-color: var(--bkgd-gradient-dark-blue);
+  width: 50px;
+  height: 50px;
 }
 
-.form-title{
+.form-link:hover {
+  filter: blur(1rem);
+}
+
+.form-title {
   color: #2A9134;
   font-size: 4rem;
-  margin-bottom: 0px ;
+  margin-bottom: 0px;
 }
 
-.form-select{
-  padding: 20px;
+.form-select {
+  padding: 10%;
 }
 
 .form-text {
-  width: 80%;
-  color: #003249 ;
-  font-size: 2rem;
+  width: 90%;
+  color: #003249;
+  font-size: 1.75rem;
 }
 
 a {
@@ -59,34 +82,98 @@ a {
 ul {
   list-style: none;
   background-color: white;
-  padding: 30px;
+  padding: 5%;
   border-radius: 15px;
-  border: 1px black solid;
 }
 
 li {
   font-size: 1.6rem;
 }
 
-.list-love{
-  color: #D86E8E
+.list-love {
+  color: #D86E8E;
 }
 
-.list-time{
+.list-time {
   color: goldenrod;
 }
 
-.list-body{
+.list-body {
   color: #9BC4FD;
   font-family: 'Roboto Mono', monospace;
 }
 
-.list-spooky{
+.list-spooky {
   color: red;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.list-nature{
+.list-nature {
   color: rgba(97,139,74,1);
   font-family: 'Instrument Serif', serif;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1400px) {
+  .form-title{
+    font-size: 3rem;
+  }
+
+  .form-text {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  
+  .form-text {
+    width: 95%;
+    font-size: 1.5rem;
+    margin: 12px;
+  }
+
+  .form-container{
+    width: 80%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-container{
+    border-radius: 0%;
+    height: 90%;
+  }
+  
+  ul {
+    padding: 10px;
+  }
+
+  .form-title {
+    margin: auto;
+  }
+
+  .form-text {
+    width: 98%;
+    font-size: 1.25rem;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .form-container{
+    border-radius: 0%;
+    height: 100%;
+  }
+
+  .form-select{
+    padding:0%;
+  }
+
+  .form-link {
+    padding: 1px;
+    width: 50px;
+    height: 50px;
+  }
 }
