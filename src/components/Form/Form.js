@@ -32,10 +32,10 @@ const Form = ({ poets, setPoet, poet }) => {
             {options}
             <option value='random'>random</option>
           </select>
-        {poet !== 'none' && <div className='portal'><p className="link-text">enter portal</p><Link id='form-link' className='form-link' to='/poem/1'></Link></div>}
+        {poet !== 'none' && <div className='portal'><Link id='form-link' className='form-link' to='/poem/1'><p className="link-text">enter portal</p></Link></div>}
         </form>
         :
-        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         }
       </div>
     </main>
