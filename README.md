@@ -37,3 +37,5 @@ Original Entry: I structured my application with a set of nested components, and
 I utilized this [list of most commonly used poetry words](https://www.robertpeake.com/archives/6676-top-poetry-words.html) from Robert Peake to create my styling schema.
 
 Thanks to @thundercomb who created [this API](https://github.com/thundercomb/poetrydb) which made this project possible.
+
+Loading spinner from [Loading.io](https://github.com/loadingio/css-spinner/)

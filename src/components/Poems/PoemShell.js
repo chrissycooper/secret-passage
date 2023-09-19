@@ -16,7 +16,7 @@ const PoemShell = ({ poems, index, setPoet }) => {
   useEffect(() => {
     shuffleKeyPosition();
   }, [])
-
+  
   const keySrc = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBmZDQ5ZDRkYzk3ZDcwYmI3YmUyMzEyNzE3ZDdhM2RlY2YzZTRjYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/LuvAW3OKmBgywTpGDY/giphy.gif';
   const bodyHeight = document.body.clientHeight;
   const bodyWidth = document.body.clientWidth;
