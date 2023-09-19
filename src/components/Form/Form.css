@@ -57,7 +57,7 @@
 }
 
 .form-link:hover {
-  filter: blur(1rem);
+  filter: blur(.5rem);
 }
 
 .form-title {
@@ -77,7 +77,8 @@
 }
 
 a {
-  color: white;
+  color: green;
+  font-weight: bold;
   cursor: pointer;
 }
 
